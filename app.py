@@ -11,7 +11,7 @@ app = Flask(__name__)
  
 @app.route('/')
 def hello():
-	return render_template("car-price-html.html")
+	return render_template("Car-price-html.html")
 
 @app.route('/',methods=['POST'])
 
@@ -29,7 +29,7 @@ def pred():
 		my_pred = model.predict(lis)
 		my_pred = float(my_pred)
 		my_pred = round(my_pred,2)
-		return render_template("car-price-html.html",your_price = my_pred)
+		return render_template("Car-price-html.html",your_price = my_pred)
 
 
 
