@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/car-price-css-3.css') }}",type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <title>Car Price Prediction</title>
+</head>
+<body>
+    <div class="bs-image"></div>
+    <div id = "header">
+            <h1 class="Title">Car Price Predictor</h1>
+            <h3 class="Title">A Web App Using Flask</h3>
+        </div>
+        <form action="/" method="POST">
+            <div class="box">
+            <p>
+                Enter Engine Size:  
+                <input type="text" name="engine_size" placeholder="e.g - 1450" style="margin-left: 10px;" required>
+            
+                Enter Curb Weight: 
+                <input type="text" name="curb_weight" placeholder="e.g - 2468" required>
+            </p>
+            <p>
+                Enter Horse Power: 
+                <input type="text" name="horse_power" placeholder="e.g - 136" required>
+            
+                Enter Car Width:       
+                <input type="text" name="car_width" placeholder="e.g - 59.5" style="margin-left: 15px;" required>
+            </p>
+            <p>
+                Enter Car Length:   
+                <input type="text" name="car_length"  placeholder="e.g - 167.6" style="margin-left: 12px;" required>
+            
+                Enter Wheel Base:   
+                <input type="text" name="wheel_base" placeholder="e.g - 78.4" style="margin-left: 12px;" required>
+            </p>
+            <p>
+                Enter Bore Ratio:     
+                <input type="text" name="bore_ratio"  placeholder="e.g - 2.64" style="margin-left: 16px;" required>
+            
+                Enter Car Height:     
+                <input type="text" name="car_height" placeholder="e.g - 48.3" style="margin-left: 15px;" required>
+            </p>
+
+            <button class="btn btn-outline-warning" type="submit">PREDICT</button>
+
+            <div class="result">
+                {% if your_price %}   
+                <h3>Your car Price is: ${{ your_price }}</h3>
+                
+                {% endif %}
+
+            </div>
+            
+            </div>
+            
+
+        </form>
+        
+        
+    <div class="footer">
+       <h4>Made With <i class="fa fa-heart" aria-hidden="true" style="font-size:26px;color:rgb(0, 255, 115)"></i> By Karan Choudhary</h4>
+        <a href="https://www.instagram.com/choudhary_krn/" ><i class="fa fa-instagram" aria-hidden="true" style="font-size:48px;color:rgb(219, 21, 113); margin: 10px;"></i></a>
+        <a href="https://www.linkedin.com/in/karan-choudhary-3b5a90185/"><i class="fa fa-linkedin-square" style="font-size:48px;color:rgb(96, 148, 179); margin: 10px;"></i></a>
+        <a href="https://github.com/Karan7887"><i class="fa fa-github" aria-hidden="true" style="font-size:48px;color:rgb(107, 209, 93); margin: 10px;"></i></a>
+    </div>
+</body>
+</html>
