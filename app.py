@@ -3,18 +3,12 @@ from logging import FileHandler,WARNING
 
 
 
-
 import joblib
 import numpy as np
 model = joblib.load("model.pkl")
 
 app = Flask(__name__)
 
-
-file_handler = FileHandler('errorlog.txt')
-
-file_handler.setLevel(WARNING)
-app.logger.addHandler(file_handler)
  
 @app.route('/')
 def hello():
